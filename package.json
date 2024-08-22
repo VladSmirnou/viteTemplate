@@ -8,7 +8,8 @@
         "build": "tsc -b && vite build",
         "lint": "eslint .",
         "preview": "vite preview",
-        "test": "jest"
+        "test": "jest",
+        "coverage": "yarn test --coverage --watchAll --collectCoverageFrom='src/components/**/*.{ts,tsx}'"
     },
     "dependencies": {
         "react": "^18.3.1",
@@ -36,6 +37,7 @@
         "ts-node": "^10.9.2",
         "typescript": "^5.5.3",
         "typescript-eslint": "^8.0.1",
-        "vite": "^5.4.1"
+        "vite": "^5.4.1",
+        "vite-tsconfig-paths": "^5.0.1"
     }
 }
