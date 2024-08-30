@@ -6474,6 +6474,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"husky@npm:^9.1.5":
+  version: 9.1.5
+  resolution: "husky@npm:9.1.5"
+  bin:
+    husky: bin.js
+  checksum: 10c0/f42efb95a026303eb880898760f802d88409780dd72f17781d2dfc302177d4f80b641cf1f1694f53f6d97c536c7397684133d8c8fe4a4426f7460186a7d1c6b8
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:0.4.24":
   version: 0.4.24
   resolution: "iconv-lite@npm:0.4.24"
@@ -8264,6 +8273,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.9"
     eslint-plugin-storybook: "npm:^0.8.0"
     globals: "npm:^15.9.0"
+    husky: "npm:^9.1.5"
     identity-obj-proxy: "npm:^3.0.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
