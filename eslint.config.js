@@ -21,12 +21,21 @@ export default tseslint.config(
         ],
     },
     {
-        extends: [js.configs.recommended, ...tseslint.configs.recommended],
+        settings: {
+            react: {
+                version: '18.3.1',
+            },
+        },
+        extends: [
+            js.configs.recommended,
+            ...tseslint.configs.recommendedTypeChecked,
+        ],
         languageOptions: {
             ecmaVersion: 2020,
             globals: globals.browser,
             parserOptions: {
-                project: ['**/tsconfig.json', '**/tsconfig.node.json'],
+                project: ['./tsconfig.json', './tsconfig.node.json'],
+                tsconfigRootDir: import.meta.dirname,
             },
         },
         plugins: {
@@ -42,6 +51,8 @@ export default tseslint.config(
         },
         files: ['**/*.{ts,tsx}'],
         rules: {
+            ...eslintReact.configs.recommended.rules,
+            ...eslintReact.configs['jsx-runtime'].rules,
             ...reactHooks.configs.recommended.rules,
             ...eslintConfigPrettier.rules,
             ...prettierPlugin.configs.recommended.rules,
